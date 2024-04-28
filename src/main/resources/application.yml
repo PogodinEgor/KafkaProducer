@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+  application:
+    name: Producer
+
+server:
+  port: 9091
+
+  springdoc:
+    swagger-ui:
+      supportedSubmitMethods: [ "get", "put", "post", "delete", "patch" ]
